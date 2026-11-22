@@ -1,0 +1,67 @@
+{
+  "name": "dsh-llm-cost",
+  "version": "1.0.1",
+  "description": "A CNY cost pill beside DeepSeek Harness's built-in token usage pill: conversation total and current turn, priced from the official DeepSeek (CNY) and xAI (USD) tables.",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "plugin",
+    "bundle",
+    "cost",
+    "pricing",
+    "token-usage",
+    "cny",
+    "deepseek",
+    "grok"
+  ],
+  "homepage": "https://github.com/YOUR_GITHUB_NAME/dsh-llm-cost#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YOUR_GITHUB_NAME/dsh-llm-cost.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YOUR_GITHUB_NAME/dsh-llm-cost/issues"
+  },
+  "license": "MIT",
+  "author": "YOUR_NAME",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "lib",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "icon.svg"
+  ],
+  "scripts": {
+    "test": "node --test test/",
+    "check": "node --check index.js && node --check client.js && node --check lib/table.js && node --check lib/period.js && node --check lib/cost.js && node --check lib/projection.js && node --check lib/fetch-rules.js && node --check lib/store.js && node --check lib/routes.js"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "dsh": ">=0.2.2-rc.5"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Conversation cost",
+    "description": "Adds a CNY cost pill beside the built-in token usage pill: conversation total and current turn, split by model, context tier and DeepSeek peak/off-peak period. DeepSeek is priced at its official CNY table with no FX conversion; Grok is converted at the configured fixed rate. The plugin page refreshes both price tables from the official pages.",
+    "detail": "docs/DETAIL.md"
+  }
+}
