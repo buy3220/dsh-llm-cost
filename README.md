@@ -43,13 +43,13 @@
 在 DSH 的 **设置 → 插件 → 添加插件**，粘贴仓库地址：
 
 ```
-github:YOUR_GITHUB_NAME/dsh-llm-cost
+github:buy3220/dsh-llm-cost
 ```
 
-也接受 `https://github.com/YOUR_GITHUB_NAME/dsh-llm-cost`。需要固定版本时加 tag：
+也接受 `https://github.com/buy3220/dsh-llm-cost`。需要固定版本时加 tag：
 
 ```
-github:YOUR_GITHUB_NAME/dsh-llm-cost#v1.0.0
+github:buy3220/dsh-llm-cost#v1.0.0
 ```
 
 装完刷新一次页面即可看到胶囊（新客户端模块在页面加载时挂载）。
@@ -57,7 +57,7 @@ github:YOUR_GITHUB_NAME/dsh-llm-cost#v1.0.0
 ### 方式二：克隆后按本地目录安装
 
 ```bash
-git clone https://github.com/YOUR_GITHUB_NAME/dsh-llm-cost.git
+git clone https://github.com/buy3220/dsh-llm-cost.git
 cd dsh-llm-cost
 ```
 
@@ -68,7 +68,7 @@ cd dsh-llm-cost
 在任意会话里让 Agent 执行：
 
 ```
-plugin_manager install_bundle target="github:YOUR_GITHUB_NAME/dsh-llm-cost"
+plugin_manager install_bundle target="github:buy3220/dsh-llm-cost"
 ```
 
 ### 方式四：发布到 npm 之后按包名安装
@@ -214,7 +214,7 @@ docs/DETAIL.md      插件详情页文档
 
 `dsh-llm-cost` adds a CNY cost pill next to DeepSeek Harness's built-in token usage pill. It shows the conversation total and the current turn, with a click-open breakdown by model, DeepSeek peak/off-peak period and xAI context tier. The built-in pill is never touched.
 
-Install from the Plugins settings section: add `github:YOUR_GITHUB_NAME/dsh-llm-cost` (or a cloned absolute directory path), then reload the page. No build step and no runtime dependencies.
+Install from the Plugins settings section: add `github:buy3220/dsh-llm-cost` (or a cloned absolute directory path), then reload the page. No build step and no runtime dependencies.
 
 Pricing: DeepSeek uses its official CNY table with no FX conversion; Grok uses its USD table multiplied by a configurable fixed rate (default 6.7). Amounts keep six decimals, rounded half up, trailing zeros trimmed. The plugin page can refresh both price tables from the official pages, validating the billing framework first and refusing to apply a structure it no longer understands.
 
